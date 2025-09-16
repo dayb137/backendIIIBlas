@@ -12,9 +12,18 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/dayb137/backendIIIBlas/issues"
   },
   "homepage": "https://github.com/dayb137/backendIIIBlas#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.18.1"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^10.0.0"
+  }
 }
