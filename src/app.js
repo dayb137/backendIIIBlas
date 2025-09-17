@@ -14,7 +14,7 @@ app.use("/api/users", usersRouter);
 app.use("/api/pets", petsRouter);
 
 const PORT = 3000;
-const MONGO_URI = "mongodb://localhost:27017/mocksDB";
+const MONGO_URI = "mongodb+srv://dayblas007_db_user:MnvaA4QxGwr8AoPl@mocks.kgjisz2.mongodb.net/?retryWrites=true&w=majority&appName=mocks";
 
 mongoose.connect(MONGO_URI)
     .then(() => {

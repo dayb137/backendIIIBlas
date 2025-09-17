@@ -1,15 +1,18 @@
 import { faker } from "@faker-js/faker";
+import bcrypt from "bcrypt";
 
 export const generateMockUser = () => {
-    return{
+    return {
         first_name: faker.person.firstName(),
         last_name: faker.person.lastName(),
-        emial: faker.person.emial(),
-        password: faker.internet.password(),
-        age: faker.number.int({min: 18, max: 80}),
+        email: faker.internet.email(),  
+        password: bcrypt.hashSync("coder123", 10), 
+        age: faker.number.int({ min: 18, max: 80 }),
+        role: faker.helpers.arrayElement(["user", "admin"]),
+        pets: [] 
     };
 };
 
-export const generateMockUsers = (conutn = 10) => {
-    return Array.from({ length: count }, generateMockUser);
-}
+export const generateMockUsers = (count = 10) => {
+    return Array.from({ length: count }, () => generateMockUser());
+};
